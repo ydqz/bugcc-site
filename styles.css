@@ -68,15 +68,31 @@ a:hover { opacity: 0.7; }
   justify-content: space-between;
   height: 72px;
 }
-.nav__brand { display: flex; flex-direction: column; line-height: 1.1; }
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.nav__logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.nav__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
 .nav__logo {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 26px;
+  font-size: 22px;
   color: var(--red);
   letter-spacing: 0.5px;
 }
-.nav__sub { font-size: 11px; color: var(--ink-soft); letter-spacing: 0.5px; }
+.nav__sub { font-size: 10px; color: var(--ink-soft); letter-spacing: 0.5px; }
 
 .nav__links { display: flex; gap: 32px; align-items: center; }
 .nav__links a { font-size: 15px; font-weight: 500; color: var(--ink); }
@@ -182,55 +198,17 @@ a:hover { opacity: 0.7; }
   align-items: center;
 }
 
-/* 印章风格 logo 占位 */
-.seal {
-  width: 280px;
-  height: 280px;
-  position: relative;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+/* Hero 印章 — 直接用 logo 图 */
+.hero__seal-img {
+  width: 320px;
+  height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.18));
+  animation: seal-float 6s ease-in-out infinite;
 }
-.seal__ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: var(--cream-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 6px solid var(--red);
-}
-.seal__ring-text {
-  position: absolute;
-  font-size: 9px;
-  font-family: var(--font-en);
-  letter-spacing: 2px;
-  color: var(--red);
-  white-space: nowrap;
-}
-.seal__inner {
-  position: absolute;
-  inset: 24px;
-  border-radius: 50%;
-  background: var(--red);
-  color: var(--cream-soft);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--cream-soft);
-}
-.seal__logo {
-  font-family: var(--font-serif);
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-.seal__year {
-  font-family: var(--font-en);
-  font-size: 12px;
-  letter-spacing: 4px;
-  margin-top: 8px;
-  opacity: 0.85;
+@keyframes seal-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .hero__scroll {
@@ -759,11 +737,22 @@ a:hover { opacity: 0.7; }
   gap: 48px;
   margin-bottom: 48px;
 }
+.footer__brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.footer__logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 .footer__logo {
   font-family: var(--font-serif);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 16px;
 }
 .footer__brand p { font-size: 14px; opacity: 0.7; line-height: 1.7; }
 .footer__motto { margin-top: 16px; font-family: var(--font-serif); font-size: 16px; }
@@ -815,8 +804,7 @@ a:hover { opacity: 0.7; }
   .hero__bg { width: 100%; opacity: 0.05; }
   .hero__inner { grid-template-columns: 1fr; gap: 40px; }
   .hero__seal { order: -1; }
-  .seal { width: 200px; height: 200px; }
-  .seal__logo { font-size: 36px; }
+  .hero__seal-img { width: 220px; height: 220px; }
 
   .about__grid { grid-template-columns: 1fr; gap: 40px; }
   .eb__grid, .dept-grid, .events { grid-template-columns: 1fr; }
