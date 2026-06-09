@@ -196,6 +196,9 @@ a:hover { opacity: 0.7; }
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 让 logo 居中在右侧红色背景块上（红色块占页面右 45%，右列占 grid 右侧 45.5%）*/
+  padding-right: 0;
+  transform: translateX(8%);
 }
 
 /* Hero 印章 — 直接用 logo 图 */
@@ -803,7 +806,7 @@ a:hover { opacity: 0.7; }
 
   .hero__bg { width: 100%; opacity: 0.05; }
   .hero__inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero__seal { order: -1; }
+  .hero__seal { order: -1; transform: none; }
   .hero__seal-img { width: 220px; height: 220px; }
 
   .about__grid { grid-template-columns: 1fr; gap: 40px; }
