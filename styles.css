@@ -198,7 +198,7 @@ a:hover { opacity: 0.7; }
   align-items: center;
   /* 让 logo 居中在右侧红色背景块上（红色块占页面右 45%，右列占 grid 右侧 45.5%）*/
   padding-right: 0;
-  transform: translateX(12%);
+  transform: translateX(14%);
 }
 
 /* Hero 印章 — 直接用 logo 图 */
