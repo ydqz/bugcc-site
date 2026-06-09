@@ -1,0 +1,11 @@
+# 开发预览（不部署）
+.dev-previews/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
