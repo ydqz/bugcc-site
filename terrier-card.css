@@ -1,0 +1,335 @@
+/* ============================================
+   Terrier Card · 一屏一商家全屏滚动
+   ============================================ */
+
+/* 全屏 snap 容器 */
+.tc-page {
+  margin: 0;
+  background: var(--cream, #FBF4DD);
+  color: var(--ink, #2B1317);
+}
+
+.tc-snap {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* 隐藏滚动条但保留滚动 */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(166,24,42,0.3) transparent;
+}
+.tc-snap::-webkit-scrollbar { width: 6px; }
+.tc-snap::-webkit-scrollbar-thumb {
+  background: rgba(166,24,42,0.25);
+  border-radius: 3px;
+}
+.tc-snap::-webkit-scrollbar-track { background: transparent; }
+
+/* 单屏 */
+.tc-screen {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px 40px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ============ HERO 屏 ============ */
+.tc-screen--hero {
+  background: var(--cream-soft, #FBF4DD);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(166,24,42,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(166,24,42,0.05) 0%, transparent 40%);
+}
+.tc-hero__inner {
+  max-width: 920px;
+  width: 100%;
+  text-align: left;
+}
+.tc-hero__eyebrow {
+  font-family: var(--font-en, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red, #A6182A);
+  margin: 0 0 24px;
+}
+.tc-hero__title {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(64px, 11vw, 144px);
+  font-weight: 700;
+  line-height: 0.92;
+  margin: 0 0 28px;
+  color: var(--red-dark, #7B0F1F);
+  letter-spacing: -1px;
+}
+.tc-hero__lede {
+  font-size: clamp(15px, 1.6vw, 19px);
+  line-height: 1.7;
+  color: var(--ink, #2B1317);
+  margin: 0 0 48px;
+  max-width: 580px;
+  opacity: 0.85;
+}
+
+/* 三步说明 */
+.tc-hero__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.tc-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.tc-step__num {
+  font-family: var(--font-serif, serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--red, #A6182A);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+}
+.tc-step__body { flex: 1; }
+.tc-step__body h3 {
+  font-family: var(--font-sans-cn, 'Noto Sans SC', sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--red-dark, #7B0F1F);
+  letter-spacing: 0.5px;
+}
+.tc-step__body p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--ink-soft, #6b5050);
+}
+
+.tc-hero__hint {
+  font-family: var(--font-en, 'Inter', sans-serif);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--red, #A6182A);
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  animation: tc-bounce 2s ease-in-out infinite;
+}
+@keyframes tc-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+/* ============ 商家屏 ============ */
+.tc-screen--merchant {
+  background: var(--red, #A6182A);
+  color: var(--cream, #FBF4DD);
+  position: relative;
+}
+.tc-screen--merchant::before {
+  content: '';
+  position: absolute;
+  inset: 32px;
+  border: 2px solid rgba(251,244,221,0.18);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* 交替深浅红 */
+.tc-screen--merchant[data-idx="02"],
+.tc-screen--merchant[data-idx="04"] {
+  background: var(--red-dark, #7B0F1F);
+}
+
+.tc-merchant__num {
+  position: absolute;
+  top: 56px;
+  right: 56px;
+  font-family: var(--font-serif, serif);
+  font-size: clamp(80px, 18vw, 240px);
+  font-weight: 700;
+  color: rgba(251,244,221,0.08);
+  line-height: 1;
+  letter-spacing: -4px;
+  pointer-events: none;
+}
+.tc-merchant__inner {
+  text-align: center;
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+.tc-merchant__eyebrow {
+  font-family: var(--font-en, 'Inter', sans-serif);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(251,244,221,0.7);
+  margin: 0 0 32px;
+  font-weight: 500;
+}
+.tc-merchant__name {
+  font-family: var(--font-serif, serif);
+  font-size: clamp(64px, 10vw, 132px);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 16px;
+  letter-spacing: -1px;
+  color: var(--cream, #FBF4DD);
+}
+.tc-merchant__name-en {
+  font-family: var(--font-serif, serif);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-style: italic;
+  margin: 0 0 48px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+.tc-merchant__discount {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 1.5px solid rgba(251,244,221,0.5);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--cream, #FBF4DD);
+  font-family: var(--font-en, 'Inter', sans-serif);
+  font-weight: 500;
+}
+
+/* ============ 条款屏 ============ */
+.tc-screen--terms {
+  background: var(--cream, #FBF4DD);
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(166,24,42,0.04) 0%, transparent 60%);
+}
+.tc-terms__inner {
+  text-align: center;
+  max-width: 600px;
+}
+.tc-terms__eyebrow {
+  font-family: var(--font-en, sans-serif);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red, #A6182A);
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+.tc-terms__title {
+  font-family: var(--font-serif, serif);
+  font-size: clamp(40px, 6vw, 64px);
+  margin: 0 0 32px;
+  color: var(--red-dark, #7B0F1F);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.tc-terms__body {
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.8;
+  color: var(--ink, #2B1317);
+  margin: 0 0 40px;
+  opacity: 0.85;
+}
+.tc-terms__sign {
+  font-family: var(--font-serif, serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft, #6b5050);
+  margin: 0 0 56px;
+  letter-spacing: 1px;
+}
+.tc-terms__back {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: var(--font-en, sans-serif);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream, #FBF4DD);
+  background: var(--red, #A6182A);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.tc-terms__back:hover { background: var(--red-dark, #7B0F1F); }
+
+/* ============ 右侧分页指示器 ============ */
+.tc-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(166,24,42,0.25);
+  border: 1.5px solid transparent;
+  transition: all 0.25s;
+  display: block;
+  text-decoration: none;
+}
+.tc-dot:hover {
+  background: rgba(166,24,42,0.5);
+  transform: scale(1.2);
+}
+.tc-dot--active {
+  background: var(--red, #A6182A);
+  border-color: var(--red, #A6182A);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 3px rgba(166,24,42,0.15);
+}
+
+/* 在红色屏幕上 dot 反色 */
+.tc-screen--merchant ~ .tc-dots .tc-dot { /* CSS 选择器无法跨越 main，靠 JS 处理 */ }
+
+/* ============ 移动端适配 ============ */
+@media (max-width: 720px) {
+  .tc-screen { padding: 80px 20px 40px; }
+
+  .tc-hero__steps {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .tc-step__num { font-size: 28px; width: 36px; }
+  .tc-hero__lede { margin-bottom: 32px; }
+
+  .tc-merchant__num {
+    top: 24px;
+    right: 24px;
+    font-size: 80px;
+  }
+  .tc-screen--merchant::before { inset: 16px; }
+
+  .tc-dots {
+    right: 12px;
+    gap: 10px;
+  }
+  .tc-dot { width: 8px; height: 8px; }
+}
+
+@media (max-height: 640px) {
+  .tc-hero__title { font-size: clamp(48px, 9vw, 88px); margin-bottom: 16px; }
+  .tc-hero__lede { margin-bottom: 24px; }
+  .tc-hero__steps { gap: 14px; margin-bottom: 24px; }
+}

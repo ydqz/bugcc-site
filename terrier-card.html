@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terrier Card · BUGCC 福利</title>
+  <meta name="description" content="BUGCC Terrier Card：拿着学生卡去合作餐厅享受专属折扣。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="terrier-card.css" />
+</head>
+<body class="tc-page">
+
+  <header class="nav nav--scrolled">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__brand">
+        <img src="assets/logo-small.png" alt="BUGCC" class="nav__logo-img" />
+        <div class="nav__brand-text">
+          <span class="nav__logo">BUGCC</span>
+          <span class="nav__sub">Boston University · Global China Connection</span>
+        </div>
+      </a>
+      <nav class="nav__links">
+        <div class="nav__item nav__item--has-sub">
+          <a href="index.html" class="nav__item-link">主页 <span class="nav__caret">▾</span></a>
+          <div class="nav__sub-menu">
+            <a href="#wechat" class="js-open-wechat" onclick="event.preventDefault();document.getElementById('wechat-modal').classList.add('is-open');">微信公众号</a>
+            <a href="https://www.linkedin.com/company/boston-university-global-china-connection/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/bu.gcc/?hl=zh-cn" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.xiaohongshu.com/user/profile/65340f0e0000000004009300?xsec_token=ABUep1do2QC9o_gzq27VbNkNA_7J5YVXQmBqQd_XhSGQ4%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener">小红书</a>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAGgbRvF30oRxwG3j33un5IYApHxEmTyysui37u9chLVN0ZH9MnkPSCTFHTLzHxSeB?from_tab_name=main" target="_blank" rel="noopener">抖音</a>
+            <a href="https://bu.campuslabs.com/engage/organization/global-china-connection" target="_blank" rel="noopener">BU Engage</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub">
+          <a href="departments.html" class="nav__item-link">关于我们 <span class="nav__caret">▾</span></a>
+          <div class="nav__sub-menu">
+            <a href="dept/president.html">主席团</a>
+            <a href="dept/af.html">事务部</a>
+            <a href="dept/fe.html">融资部</a>
+            <a href="dept/mk.html">市场部</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub">
+          <a href="events.html" class="nav__item-link">活动 <span class="nav__caret">▾</span></a>
+          <div class="nav__sub-menu">
+            <a href="event/orientation.html">新生见面会</a>
+            <a href="event/workshop.html">Workshop</a>
+            <a href="event/mentorship.html">Mentorship</a>
+            <a href="event/cultural.html">Cultural Events</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub">
+          <a href="#" class="nav__item-link">项目 <span class="nav__caret">▾</span></a>
+          <div class="nav__sub-menu">
+            <a href="#">BU规则怪谈</a>
+            <a href="#">BU留子日记</a>
+            <a href="#">BU吃货日记</a>
+            <a href="#">比斯尼斯</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub">
+          <a href="#" class="nav__item-link is-active">福利 <span class="nav__caret">▾</span></a>
+          <div class="nav__sub-menu">
+            <a href="terrier-card.html" class="is-active">Terrier Card</a>
+          </div>
+        </div>
+        <a href="index.html#join" class="nav__cta">加入我们</a>
+      </nav>
+      <button class="nav__toggle" aria-label="menu">MENU</button>
+    </div>
+  </header>
+
+  <main class="tc-snap">
+
+    <!-- ============ SCREEN 0 / HERO ============ -->
+    <section class="tc-screen tc-screen--hero">
+      <div class="tc-hero__inner">
+        <p class="tc-hero__eyebrow">BUGCC · 福利</p>
+        <h1 class="tc-hero__title">TERRIER<br/>CARD</h1>
+        <p class="tc-hero__lede">
+          想吃但也想省钱？没问题。<br/>
+          掏出你的 BU 学生卡 ——<br/>
+          BUGCC 已经替你跟商家谈好折扣。
+        </p>
+
+        <div class="tc-hero__steps">
+          <div class="tc-step">
+            <div class="tc-step__num">01</div>
+            <div class="tc-step__body">
+              <h3>是什么</h3>
+              <p>BUGCC 与波士顿合作商家联合推出的 BU 学生专属优惠通道。</p>
+            </div>
+          </div>
+          <div class="tc-step">
+            <div class="tc-step__num">02</div>
+            <div class="tc-step__body">
+              <h3>怎么获取最新消息</h3>
+              <p>关注 BUGCC 微信公众号 / 小红书 / Instagram，随时看到合作商家的更新。</p>
+            </div>
+          </div>
+          <div class="tc-step">
+            <div class="tc-step__num">03</div>
+            <div class="tc-step__body">
+              <h3>怎么使用</h3>
+              <p>在合作商家结账时出示 BU 学生卡，告知"BUGCC 持卡人"，即可享受对应折扣。</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="tc-hero__hint">↓ 下滑查看合作商家</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 1 / 旺角 ============ -->
+    <section class="tc-screen tc-screen--merchant" data-idx="01">
+      <div class="tc-merchant__num">01</div>
+      <div class="tc-merchant__inner">
+        <p class="tc-merchant__eyebrow">合作商家 · 01 / 05</p>
+        <h2 class="tc-merchant__name">旺角</h2>
+        <p class="tc-merchant__name-en"><em>Wong Kok</em></p>
+        <p class="tc-merchant__discount">折扣详情敬请期待</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 2 / 烹小鲜 ============ -->
+    <section class="tc-screen tc-screen--merchant" data-idx="02">
+      <div class="tc-merchant__num">02</div>
+      <div class="tc-merchant__inner">
+        <p class="tc-merchant__eyebrow">合作商家 · 02 / 05</p>
+        <h2 class="tc-merchant__name">烹小鲜</h2>
+        <p class="tc-merchant__name-en"><em>Peng Xiao Xian</em></p>
+        <p class="tc-merchant__discount">折扣详情敬请期待</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 3 / Mala Town ============ -->
+    <section class="tc-screen tc-screen--merchant" data-idx="03">
+      <div class="tc-merchant__num">03</div>
+      <div class="tc-merchant__inner">
+        <p class="tc-merchant__eyebrow">合作商家 · 03 / 05</p>
+        <h2 class="tc-merchant__name">Mala Town</h2>
+        <p class="tc-merchant__name-en"><em>麻辣小镇</em></p>
+        <p class="tc-merchant__discount">折扣详情敬请期待</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 4 / 九汤拉面 ============ -->
+    <section class="tc-screen tc-screen--merchant" data-idx="04">
+      <div class="tc-merchant__num">04</div>
+      <div class="tc-merchant__inner">
+        <p class="tc-merchant__eyebrow">合作商家 · 04 / 05</p>
+        <h2 class="tc-merchant__name">九汤拉面</h2>
+        <p class="tc-merchant__name-en"><em>Jiu Tang Ramen</em></p>
+        <p class="tc-merchant__discount">折扣详情敬请期待</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 5 / 蜀大侠 ============ -->
+    <section class="tc-screen tc-screen--merchant" data-idx="05">
+      <div class="tc-merchant__num">05</div>
+      <div class="tc-merchant__inner">
+        <p class="tc-merchant__eyebrow">合作商家 · 05 / 05</p>
+        <h2 class="tc-merchant__name">蜀大侠</h2>
+        <p class="tc-merchant__name-en"><em>Shu Da Xia</em></p>
+        <p class="tc-merchant__discount">折扣详情敬请期待</p>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 6 / TERMS ============ -->
+    <section class="tc-screen tc-screen--terms">
+      <div class="tc-terms__inner">
+        <p class="tc-terms__eyebrow">使用条款</p>
+        <h2 class="tc-terms__title">温馨提示</h2>
+        <p class="tc-terms__body">
+          每位 CC 卡持有者每次消费限享一次优惠，<br/>
+          不可与店家其他活动 / 折扣叠加使用。
+        </p>
+        <p class="tc-terms__sign">— BUGCC 福利组</p>
+        <a href="index.html" class="tc-terms__back">← 返回主页</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧分页指示器 -->
+  <nav class="tc-dots" aria-label="商家分页">
+    <a href="#" class="tc-dot tc-dot--active" data-target="0" title="封面"></a>
+    <a href="#" class="tc-dot" data-target="1" title="旺角"></a>
+    <a href="#" class="tc-dot" data-target="2" title="烹小鲜"></a>
+    <a href="#" class="tc-dot" data-target="3" title="Mala Town"></a>
+    <a href="#" class="tc-dot" data-target="4" title="九汤拉面"></a>
+    <a href="#" class="tc-dot" data-target="5" title="蜀大侠"></a>
+    <a href="#" class="tc-dot" data-target="6" title="使用条款"></a>
+  </nav>
+
+  <!-- ============ WECHAT MODAL ============ -->
+  <div id="wechat-modal" class="wechat-modal" onclick="if(event.target===this)this.classList.remove('is-open');">
+    <div class="wechat-modal__card">
+      <button class="wechat-modal__close" onclick="document.getElementById('wechat-modal').classList.remove('is-open');" aria-label="关闭">×</button>
+      <h3 class="wechat-modal__title">扫码关注 BUGCC 公众号</h3>
+      <img src="assets/wechat-qrcode.png" alt="BUGCC 微信公众号二维码" class="wechat-modal__qr" />
+      <p class="wechat-modal__hint">用微信「扫一扫」即可关注</p>
+    </div>
+  </div>
+
+  <script>
+  // 滚动联动右侧 dot 指示器
+  (function(){
+    var snap = document.querySelector('.tc-snap');
+    var screens = document.querySelectorAll('.tc-screen');
+    var dots = document.querySelectorAll('.tc-dot');
+    if (!snap || !screens.length) return;
+
+    // 点击 dot 跳到对应屏
+    dots.forEach(function(d, i){
+      d.addEventListener('click', function(e){
+        e.preventDefault();
+        var target = screens[i];
+        if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // 滚动时更新激活 dot
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting && en.intersectionRatio > 0.5) {
+          var i = Array.prototype.indexOf.call(screens, en.target);
+          dots.forEach(function(d){ d.classList.remove('tc-dot--active'); });
+          if (dots[i]) dots[i].classList.add('tc-dot--active');
+        }
+      });
+    }, { root: snap, threshold: [0.5] });
+
+    screens.forEach(function(s){ io.observe(s); });
+  })();
+  </script>
+
+</body>
+</html>
