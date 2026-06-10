@@ -1,0 +1,347 @@
+/* ============================================================
+   BUGCC · Cultural Events 页面样式
+   ============================================================ */
+
+/* ---- 数字 BANNER ---- */
+.culture-stats {
+  margin: 16px 0 40px;
+  padding: 32px 28px;
+  background: var(--red);
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 14px 36px -18px rgba(166, 24, 42, 0.4);
+}
+@media (max-width: 720px) {
+  .culture-stats { grid-template-columns: repeat(2, 1fr); padding: 26px 22px; }
+}
+
+.culture-stat {
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.culture-stat + .culture-stat::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 20%;
+  bottom: 20%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+@media (max-width: 720px) {
+  .culture-stat:nth-child(odd) + .culture-stat::before { display: none; }
+}
+
+.culture-stat__num {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+  color: #FFE680;
+}
+.culture-stat__num span {
+  font-size: 0.55em;
+  font-weight: 700;
+  color: rgba(255, 230, 128, 0.85);
+  margin-left: 2px;
+}
+.culture-stat__label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+/* ---- 主场 · 节庆头部 ---- */
+.culture-event {
+  margin: 0 0 40px;
+}
+.culture-event__head {
+  text-align: center;
+  margin: 24px 0 36px;
+}
+.culture-event__date {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 6px;
+  color: var(--red);
+  font-weight: 700;
+  margin: 0 0 12px;
+  opacity: 0.8;
+}
+.culture-event__title {
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+.culture-event__sub {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ---- 节庆 · 内容垃块（图文左右排版） ---- */
+.culture-block {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(166, 24, 42, 0.12);
+  border-radius: 18px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+.culture-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -22px rgba(166, 24, 42, 0.2);
+  border-color: rgba(166, 24, 42, 0.28);
+  background: rgba(255, 255, 255, 0.78);
+}
+@media (max-width: 720px) {
+  .culture-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 22px;
+  }
+}
+
+.culture-block--reverse .culture-block__media { order: 2; }
+@media (max-width: 720px) {
+  .culture-block--reverse .culture-block__media { order: 0; }
+}
+
+.culture-block__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(166, 24, 42, 0.06);
+}
+.culture-block__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.culture-block:hover .culture-block__media img {
+  transform: scale(1.04);
+}
+.culture-block__media--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(166, 24, 42, 0.05), rgba(166, 24, 42, 0.02));
+  border: 1px dashed rgba(166, 24, 42, 0.25);
+}
+.culture-block__media--placeholder::after {
+  content: '\6536\96c6\4e2d';
+  font-family: var(--font-serif);
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--red);
+  opacity: 0.55;
+}
+
+.culture-block__kicker {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--red);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.culture-block__text h3 {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+.culture-block__text p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+.culture-block__hl {
+  border-top: 1px dashed rgba(0, 0, 0, 0.18);
+  padding-top: 12px;
+  margin-top: 14px !important;
+  font-size: 14px !important;
+  font-style: italic;
+  color: var(--ink) !important;
+}
+
+/* ---- 美食菜单 ---- */
+.culture-menu {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.culture-menu li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+  padding: 8px 14px;
+  background: rgba(166, 24, 42, 0.04);
+  border-radius: 8px;
+  border-left: 3px solid var(--red);
+}
+.culture-menu strong {
+  color: var(--red-dark);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* ---- 中秋小卡片：链到 Mentorship ---- */
+.culture-related {
+  margin: 32px 0 40px;
+}
+.culture-related__card {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(166, 24, 42, 0.12);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+@media (max-width: 720px) {
+  .culture-related__card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px 20px;
+  }
+}
+.culture-related__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -16px rgba(166, 24, 42, 0.2);
+  border-color: rgba(166, 24, 42, 0.3);
+  background: #fff;
+}
+.culture-related__date {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.culture-related__kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--red);
+  font-weight: 600;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.culture-related__body h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.culture-related__body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.culture-related__arrow {
+  font-size: 14px;
+  color: var(--red);
+  font-weight: 600;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.culture-related__card:hover .culture-related__arrow {
+  transform: translateX(4px);
+}
+
+/* ---- 自动轮播组件 ---- */
+.culture-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.culture-slider__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.culture-slider__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none;
+}
+.culture-slider__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.culture-slider__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  z-index: 2;
+}
+.culture-slider__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.culture-slider__dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+.culture-slider__dot.is-active {
+  background: #fff;
+  width: 22px;
+  border-radius: 4px;
+}
+
+/* hover 时图片放大效果跟之前一致 */
+.culture-block:hover .culture-slider__slide.is-active {
+  transform: scale(1.04);
+  transition: opacity 0.1s ease, transform 0.4s;
+}

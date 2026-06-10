@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../dept/dept.css" />
+  <link rel="stylesheet" href="cultural.css" />
 </head>
 <body class="dept-page">
 
@@ -64,6 +65,7 @@
           <a href="../terrier-card.html" class="nav__item-link">福利 <span class="nav__caret">▾</span></a>
           <div class="nav__sub-menu">
             <a href="../terrier-card.html">Terrier Card</a>
+            <a href="https://www.canva.cn/design/DAGnuYhjyPo/r_e2Ko7pxMQjzKyJZ0_FOw/edit?utm_content=DAGnuYhjyPo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton" target="_blank" rel="noopener">新生手册</a>
           </div>
         </div>
         <a href="../index.html#join" class="nav__cta">加入我们</a>
@@ -72,28 +74,128 @@
     </div>
   </header>
 
-  <div class="dept-topbar">
-    <div class="dept-topbar__inner">
-      <a class="dept-back" href="../events.html">← 返回活动列表</a>
-      <span class="dept-topbar__brand">BUGCC · Events</span>
-    </div>
-  </div>
-
   <section class="dept-hero">
     <div class="dept-hero__num">04 / EVENT</div>
-    <h1 class="dept-hero__title">Cultural Events <span>Cultural Events</span></h1>
-    <p class="dept-hero__tagline">在波士顿，把文化感受变成共同记忆。</p>
+    <h1 class="dept-hero__title">Cultural Events</h1>
+    <p class="dept-hero__tagline">在波士顿，把中国节日变成共同记忆。</p>
   </section>
 
   <main class="dept-body">
-    <section class="dept-block coming-soon">
-      <h3>详细介绍敬请期待</h3>
-      <p>这场活动的详细介绍正在筹备中。如果你想了解更多，欢迎通过招新渠道与我们联系。</p>
+
+    <section class="mentor-intro">
+      <p class="mentor-intro__eyebrow">ABOUT · 关于 Cultural Events</p>
+      <p class="mentor-intro__body">春节不会自动降临波士顿，中秋也不会。Cultural Events 是 BUGCC 在<strong>传统节庆</strong>节点为社区点亩的仪式现场——从 <strong>年俗游戏</strong> 到 <strong>年味美食</strong>，从 <strong>中秋月饼</strong> 到 <strong>新春夜市</strong>，让身在异乡的我们，在游戏、美食与陪伴中找到归属感。</p>
+    </section>
+
+    <!-- ============ 主场 · 新春夜市 ============ -->
+    <section class="culture-event">
+      <header class="culture-event__head">
+        <p class="culture-event__date">2026 · 02 · 22</p>
+        <h2 class="culture-event__title">BUGCC 新春夜市</h2>
+        <p class="culture-event__sub">春节的假期从未真正降临波士顿——但这个周末，BUGCC 想成为你在冷冬里的那束暖光。</p>
+      </header>
+
+      <!-- 垃块 1 · 年俗游戏 -->
+      <article class="culture-block">
+        <div class="culture-block__media">
+          <div class="culture-slider" data-slider data-interval="2000">
+            <div class="culture-slider__track">
+              <img src="../assets/cultural/games-1.jpg" alt="年俗游戏现场" class="culture-slider__slide is-active" loading="lazy" />
+              <img src="../assets/cultural/games-2.jpg" alt="年俗游戏现场" class="culture-slider__slide" loading="lazy" />
+              <img src="../assets/cultural/games-3.jpg" alt="年俗游戏现场" class="culture-slider__slide" loading="lazy" />
+              <img src="../assets/cultural/games-4.jpg" alt="年俗游戏现场" class="culture-slider__slide" loading="lazy" />
+            </div>
+            <div class="culture-slider__dots">
+              <button class="culture-slider__dot is-active" data-i="0" aria-label="第 1 张"></button>
+              <button class="culture-slider__dot" data-i="1" aria-label="第 2 张"></button>
+              <button class="culture-slider__dot" data-i="2" aria-label="第 3 张"></button>
+              <button class="culture-slider__dot" data-i="3" aria-label="第 4 张"></button>
+            </div>
+          </div>
+        </div>
+        <div class="culture-block__text">
+          <p class="culture-block__kicker">壹 · 年俗游戏</p>
+          <h3>投壶、套圈、猜灯谜、轮盘一个都不能少</h3>
+          <p>不只是让人玩得不亦乐乎的小游戏——从汉朝元宵猜谜、文人雅士的投壶之戏，到今天庙会集市的游艺项目，这些年俗都是从古至今流传下来的中华文化脉动。</p>
+          <p class="culture-block__hl">带你穿越时光，玩一场属于华人的年味游戏。</p>
+        </div>
+      </article>
+
+      <!-- 垃块 2 · 年味美食 -->
+      <article class="culture-block culture-block--reverse">
+        <div class="culture-block__media">
+          <div class="culture-slider" data-slider data-interval="2000">
+            <div class="culture-slider__track">
+              <img src="../assets/cultural/foods-1.jpg" alt="年味美食现场" class="culture-slider__slide is-active" loading="lazy" />
+              <img src="../assets/cultural/foods-2.jpg" alt="年味美食现场" class="culture-slider__slide" loading="lazy" />
+              <img src="../assets/cultural/foods-3.jpg" alt="年味美食现场" class="culture-slider__slide" loading="lazy" />
+              <img src="../assets/cultural/foods-4.jpg" alt="年味美食现场" class="culture-slider__slide" loading="lazy" />
+            </div>
+            <div class="culture-slider__dots">
+              <button class="culture-slider__dot is-active" data-i="0" aria-label="第 1 张"></button>
+              <button class="culture-slider__dot" data-i="1" aria-label="第 2 张"></button>
+              <button class="culture-slider__dot" data-i="2" aria-label="第 3 张"></button>
+              <button class="culture-slider__dot" data-i="3" aria-label="第 4 张"></button>
+            </div>
+          </div>
+        </div>
+        <div class="culture-block__text">
+          <p class="culture-block__kicker">贰 · 年味美食</p>
+          <h3>玩游戏赢铜钱，换一桌好彩头</h3>
+          <p>夜市里的每一道小食都不只是充饥，是一句句藏在舒荐后面的新年心愿。</p>
+          <ul class="culture-menu">
+            <li><strong>奶茶</strong>·甜甜美美，幸福全年</li>
+            <li><strong>面条</strong>·长长久久，好运常伴</li>
+            <li><strong>炸鸡</strong>·吉祥如意，大吉大利</li>
+            <li><strong>鱼丸</strong>·团团圆圆，阔家安康</li>
+            <li><strong>牛脆</strong>·牛气冲天，步步高升</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 垃块 3 · 年贺词 -->
+      <article class="culture-block">
+        <div class="culture-block__media">
+          <div class="culture-slider" data-slider data-interval="2000">
+            <div class="culture-slider__track">
+              <img src="../assets/cultural/scene-1.jpg" alt="夜市现场氛围" class="culture-slider__slide is-active" loading="lazy" />
+              <img src="../assets/cultural/scene-2.jpg" alt="夜市现场氛围" class="culture-slider__slide" loading="lazy" />
+              <img src="../assets/cultural/scene-3.jpg" alt="夜市现场氛围" class="culture-slider__slide" loading="lazy" />
+              <img src="../assets/cultural/scene-4.jpg" alt="夜市现场氛围" class="culture-slider__slide" loading="lazy" />
+            </div>
+            <div class="culture-slider__dots">
+              <button class="culture-slider__dot is-active" data-i="0" aria-label="第 1 张"></button>
+              <button class="culture-slider__dot" data-i="1" aria-label="第 2 张"></button>
+              <button class="culture-slider__dot" data-i="2" aria-label="第 3 张"></button>
+              <button class="culture-slider__dot" data-i="3" aria-label="第 4 张"></button>
+            </div>
+          </div>
+        </div>
+        <div class="culture-block__text">
+          <p class="culture-block__kicker">叁 · 在异乡过个年</p>
+          <h3>过年从来不只是一句「新年快乐」</h3>
+          <p>它是属于我们每一个人的文化仪式，也是独属于华人的团圆情怀。</p>
+          <p class="culture-block__hl">马年大吉，万事胜意。愿你所求皆如愿，所行皆坦途。</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ 中秋 · 小卡片链到 Mentorship ============ -->
+    <section class="culture-related">
+      <a class="culture-related__card" href="mentorship.html">
+        <div class="culture-related__date">2025 · 09</div>
+        <div class="culture-related__body">
+          <p class="culture-related__kicker">还有一场·中秋月饼制作</p>
+          <h3>这场中秋品饭在 Mentorship 6.0 里</h3>
+          <p>Mentor 与 mentee 联手灯谜夺宝、投壶闯关、叠词挑战，从和面、填馅到压模——简单的月饼，在欢笑中变成了团队默契的象征。</p>
+        </div>
+        <div class="culture-related__arrow">查看完整回顾 →</div>
+      </a>
     </section>
 
     <div class="dept-cta">
-      <h3>对 BUGCC 感兴趣？</h3>
-      <p>来活动现场认识我们，或者直接加入。</p>
+      <h3>下一场 Cultural Events</h3>
+      <p>跟随 BUGCC 社交账号，不错过每个节庆的现场仪式。</p>
       <a class="dept-cta__btn" href="../index.html#join">了解招新 →</a>
     </div>
   </main>
@@ -107,6 +209,72 @@
       <p class="wechat-modal__hint">用微信「扫一扫」即可关注</p>
     </div>
   </div>
+
+  <!-- ============ 轮播 JS ============ -->
+  <script>
+  (function(){
+    var sliders = document.querySelectorAll('[data-slider]');
+    sliders.forEach(function(slider){
+      var slides = slider.querySelectorAll('.culture-slider__slide');
+      var dots = slider.querySelectorAll('.culture-slider__dot');
+      var total = slides.length;
+      if (total < 2) return;
+
+      var idx = 0;
+      var interval = parseInt(slider.getAttribute('data-interval')) || 4500;
+      var timer = null;
+      var paused = false;
+
+      function go(i){
+        idx = (i + total) % total;
+        slides.forEach(function(s, k){ s.classList.toggle('is-active', k === idx); });
+        dots.forEach(function(d, k){ d.classList.toggle('is-active', k === idx); });
+      }
+      function start(){
+        stop();
+        timer = setInterval(function(){ if (!paused) go(idx + 1); }, interval);
+      }
+      function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+
+      dots.forEach(function(d, k){
+        d.addEventListener('click', function(){
+          go(k);
+          start(); // 点后重置计时
+        });
+      });
+
+      // 鼠标悬停·离开继续
+      slider.addEventListener('mouseenter', function(){ paused = true; });
+      slider.addEventListener('mouseleave', function(){ paused = false; });
+
+      // 手机·左右滑
+      var startX = 0, isDown = false;
+      slider.addEventListener('touchstart', function(e){
+        if (e.touches.length !== 1) return;
+        startX = e.touches[0].clientX; isDown = true; paused = true;
+      }, {passive:true});
+      slider.addEventListener('touchend', function(e){
+        if (!isDown) return;
+        var dx = (e.changedTouches[0]||{clientX:startX}).clientX - startX;
+        if (Math.abs(dx) > 50) { go(idx + (dx < 0 ? 1 : -1)); start(); }
+        isDown = false; paused = false;
+      });
+
+      // IntersectionObserver·不在视口不走表
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if (en.isIntersecting) start();
+            else stop();
+          });
+        }, { threshold: 0.2 });
+        io.observe(slider);
+      } else {
+        start();
+      }
+    });
+  })();
+  </script>
 
 </body>
 </html>

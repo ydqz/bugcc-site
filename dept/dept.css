@@ -130,7 +130,7 @@
   font-weight: 800;
   letter-spacing: 2px;
   color: var(--ink);
-  background: #C9E8B8;
+  background: #FFF7D6;
   padding: 8px 20px;
   border-radius: 4px;
   margin: 8px 0 28px;
@@ -141,8 +141,9 @@
   gap: 20px;
 }
 .subgroup {
-  background: #DDEEFB;
+  background: #FFF7D6;
   border-radius: var(--radius-md);
+  border-top: 4px solid #F5C518;
   padding: 28px 24px;
 }
 .subgroup h4 {
@@ -150,9 +151,6 @@
   font-weight: 800;
   margin-bottom: 16px;
   color: var(--ink);
-  background: linear-gradient(transparent 65%, #FFE680 65%);
-  display: inline-block;
-  padding: 0 6px;
 }
 .subgroup p {
   font-size: 14px;
@@ -324,3 +322,181 @@
 
 /* 详情页 hero 顶部加点呼吸 */
 .dept-page .dept-hero { padding-top: 60px; }
+
+/* ---- Mentorship 五章回顾 ---- */
+.chapter {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px;
+  gap: 24px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(166, 24, 42, 0.12);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+@media (max-width: 860px) {
+  .chapter {
+    grid-template-columns: 60px 1fr;
+    gap: 16px;
+  }
+  .chapter__photo { grid-column: 1 / -1; }
+}
+.chapter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -16px rgba(166, 24, 42, 0.18);
+  border-color: rgba(166, 24, 42, 0.28);
+  background: rgba(255, 255, 255, 0.78);
+}
+.chapter__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(166, 24, 42, 0.06);
+}
+.chapter__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.chapter:hover .chapter__photo img {
+  transform: scale(1.04);
+}
+@media (max-width: 720px) {
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 20px;
+  }
+}
+.chapter__num {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  opacity: 0.85;
+}
+.chapter__kicker {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--red-dark);
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+.chapter__body h4 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.chapter__body p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+.chapter__hl {
+  border-top: 1px dashed rgba(0, 0, 0, 0.18);
+  padding-top: 10px;
+  margin-top: 12px !important;
+  font-size: 13px !important;
+  font-style: italic;
+  color: var(--ink) !important;
+}
+
+.mentor-credit {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ---- Mentorship "关于" 卡片：鲜艳锚点 ---- */
+.mentor-intro {
+  position: relative;
+  margin: 16px 0 32px;
+  padding: 36px 40px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 14px 36px -18px rgba(166, 24, 42, 0.45);
+  overflow: hidden;
+}
+.mentor-intro__eyebrow {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 0 14px;
+  position: relative;
+}
+.mentor-intro__body {
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.85;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  font-weight: 400;
+}
+.mentor-intro__body strong {
+  color: #FFE680;
+  font-weight: 700;
+}
+
+/* RECAP 简介：变得低调 */
+.mentor-recap-intro p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  opacity: 0.85;
+}
+.mentor-recap-intro .dept-block__eyebrow {
+  opacity: 0.6;
+}
+
+/* ---- Mentorship 介绍下方主图 ---- */
+.mentor-photo {
+  margin: 0 0 32px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 48px -22px rgba(0, 0, 0, 0.28);
+}
+.mentor-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---- Mentorship 收获段（C 方案：行内一句话） ---- */
+.mentor-takeaway__line {
+  font-size: 16px;
+  line-height: 2;
+  color: var(--ink);
+  margin: 8px 0 20px;
+  font-weight: 500;
+}
+
+/* 图片缺失时的占位样式 */
+.chapter__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(166, 24, 42, 0.05), rgba(166, 24, 42, 0.02));
+  border: 1px dashed rgba(166, 24, 42, 0.25);
+}
+.chapter__photo--placeholder::after {
+  content: '\6536\96c6\4e2d';
+  font-family: var(--font-serif);
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--red);
+  opacity: 0.55;
+}

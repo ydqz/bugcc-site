@@ -65,6 +65,7 @@
           <a href="#" class="nav__item-link is-active">福利 <span class="nav__caret">▾</span></a>
           <div class="nav__sub-menu">
             <a href="terrier-card.html" class="is-active">Terrier Card</a>
+            <a href="https://www.canva.cn/design/DAGnuYhjyPo/r_e2Ko7pxMQjzKyJZ0_FOw/edit?utm_content=DAGnuYhjyPo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton" target="_blank" rel="noopener">新生手册</a>
           </div>
         </div>
         <a href="index.html#join" class="nav__cta">加入我们</a>
@@ -114,58 +115,63 @@
       </div>
     </section>
 
-    <!-- ============ SCREEN 1 / 旺角 ============ -->
-    <section class="tc-screen tc-screen--merchant" data-idx="01">
-      <div class="tc-merchant__num">01</div>
-      <div class="tc-merchant__inner">
-        <p class="tc-merchant__eyebrow">合作商家 · 01 / 05</p>
-        <h2 class="tc-merchant__name">旺角</h2>
-        <p class="tc-merchant__name-en"><em>Wong Kok</em></p>
-        <p class="tc-merchant__discount">折扣详情敬请期待</p>
-      </div>
-    </section>
+    <!-- ============ SCREEN 1 / MERCHANTS CAROUSEL ============ -->
+    <section class="tc-screen tc-screen--carousel">
+      <div class="tc-carousel">
+        <p class="tc-carousel__eyebrow">合作商家</p>
 
-    <!-- ============ SCREEN 2 / 烹小鲜 ============ -->
-    <section class="tc-screen tc-screen--merchant" data-idx="02">
-      <div class="tc-merchant__num">02</div>
-      <div class="tc-merchant__inner">
-        <p class="tc-merchant__eyebrow">合作商家 · 02 / 05</p>
-        <h2 class="tc-merchant__name">烹小鲜</h2>
-        <p class="tc-merchant__name-en"><em>Peng Xiao Xian</em></p>
-        <p class="tc-merchant__discount">折扣详情敬请期待</p>
-      </div>
-    </section>
+        <div class="tc-carousel__viewport">
+          <div class="tc-carousel__track" id="tc-track">
+            <article class="tc-card tc-card--01">
+              <div class="tc-card__num">01</div>
+              <p class="tc-card__order">01 / 05</p>
+              <h2 class="tc-card__name">旺角</h2>
+              <p class="tc-card__name-en"><em>Wong Kok</em></p>
+              <p class="tc-card__discount">堂食消费满 $20，现金支付享 <strong>88 折</strong>（需出示 BU 学生 ID）</p>
+            </article>
+            <article class="tc-card tc-card--02">
+              <div class="tc-card__num">02</div>
+              <p class="tc-card__order">02 / 05</p>
+              <h2 class="tc-card__name">烹小鲜</h2>
+              <p class="tc-card__name-en"><em>Peng Xiao Xian</em></p>
+              <p class="tc-card__discount">线下店消费即享 <strong>超值小菜 6 选 2</strong> + 自选饮料福利</p>
+            </article>
+            <article class="tc-card tc-card--03">
+              <div class="tc-card__num">03</div>
+              <p class="tc-card__order">03 / 05</p>
+              <h2 class="tc-card__name">Mala Town</h2>
+              <p class="tc-card__name-en"><em>麻辣小镇</em></p>
+              <p class="tc-card__discount">堂食消费即享 <strong>9 折</strong>优惠（需出示 BU 学生 ID）</p>
+            </article>
+            <article class="tc-card tc-card--04">
+              <div class="tc-card__num">04</div>
+              <p class="tc-card__order">04 / 05</p>
+              <h2 class="tc-card__name">九汤拉面</h2>
+              <p class="tc-card__name-en"><em>Jiu Tang Ramen</em></p>
+              <p class="tc-card__discount">单笔消费满 $50，<strong>免费赠送抹茶布丁一份</strong></p>
+            </article>
+            <article class="tc-card tc-card--05">
+              <div class="tc-card__num">05</div>
+              <p class="tc-card__order">05 / 05</p>
+              <h2 class="tc-card__name">蜀大侠</h2>
+              <p class="tc-card__name-en"><em>Shu Da Xia</em></p>
+              <p class="tc-card__discount">现金 / 刷卡消费均享 <strong>95 折</strong>优惠</p>
+            </article>
+          </div>
+        </div>
 
-    <!-- ============ SCREEN 3 / Mala Town ============ -->
-    <section class="tc-screen tc-screen--merchant" data-idx="03">
-      <div class="tc-merchant__num">03</div>
-      <div class="tc-merchant__inner">
-        <p class="tc-merchant__eyebrow">合作商家 · 03 / 05</p>
-        <h2 class="tc-merchant__name">Mala Town</h2>
-        <p class="tc-merchant__name-en"><em>麻辣小镇</em></p>
-        <p class="tc-merchant__discount">折扣详情敬请期待</p>
-      </div>
-    </section>
+        <button class="tc-carousel__btn tc-carousel__btn--prev" id="tc-prev" aria-label="上一家">‹</button>
+        <button class="tc-carousel__btn tc-carousel__btn--next" id="tc-next" aria-label="下一家">›</button>
 
-    <!-- ============ SCREEN 4 / 九汤拉面 ============ -->
-    <section class="tc-screen tc-screen--merchant" data-idx="04">
-      <div class="tc-merchant__num">04</div>
-      <div class="tc-merchant__inner">
-        <p class="tc-merchant__eyebrow">合作商家 · 04 / 05</p>
-        <h2 class="tc-merchant__name">九汤拉面</h2>
-        <p class="tc-merchant__name-en"><em>Jiu Tang Ramen</em></p>
-        <p class="tc-merchant__discount">折扣详情敬请期待</p>
-      </div>
-    </section>
+        <div class="tc-carousel__dots" id="tc-card-dots">
+          <button class="tc-card-dot tc-card-dot--active" data-i="0" aria-label="旺角"></button>
+          <button class="tc-card-dot" data-i="1" aria-label="烹小鲜"></button>
+          <button class="tc-card-dot" data-i="2" aria-label="Mala Town"></button>
+          <button class="tc-card-dot" data-i="3" aria-label="九汤拉面"></button>
+          <button class="tc-card-dot" data-i="4" aria-label="蜀大侠"></button>
+        </div>
 
-    <!-- ============ SCREEN 5 / 蜀大侠 ============ -->
-    <section class="tc-screen tc-screen--merchant" data-idx="05">
-      <div class="tc-merchant__num">05</div>
-      <div class="tc-merchant__inner">
-        <p class="tc-merchant__eyebrow">合作商家 · 05 / 05</p>
-        <h2 class="tc-merchant__name">蜀大侠</h2>
-        <p class="tc-merchant__name-en"><em>Shu Da Xia</em></p>
-        <p class="tc-merchant__discount">折扣详情敬请期待</p>
+        <p class="tc-carousel__hint">↓ 下滑查看使用条款</p>
       </div>
     </section>
 
@@ -175,25 +181,21 @@
         <p class="tc-terms__eyebrow">使用条款</p>
         <h2 class="tc-terms__title">温馨提示</h2>
         <p class="tc-terms__body">
-          每位 CC 卡持有者每次消费限享一次优惠，<br/>
-          不可与店家其他活动 / 折扣叠加使用。
+          以上优惠每位 Terrier Card 持卡人每次消费限一次，<br/>
+          不可与店内其他优惠 / 套餐叠加使用。
         </p>
-        <p class="tc-terms__sign">— BUGCC 福利组</p>
+        <p class="tc-terms__sign">— BUGCC FE</p>
         <a href="index.html" class="tc-terms__back">← 返回主页</a>
       </div>
     </section>
 
   </main>
 
-  <!-- 右侧分页指示器 -->
-  <nav class="tc-dots" aria-label="商家分页">
+  <!-- 右侧分页指示器（3 屏）-->
+  <nav class="tc-dots" aria-label="页面分页">
     <a href="#" class="tc-dot tc-dot--active" data-target="0" title="封面"></a>
-    <a href="#" class="tc-dot" data-target="1" title="旺角"></a>
-    <a href="#" class="tc-dot" data-target="2" title="烹小鲜"></a>
-    <a href="#" class="tc-dot" data-target="3" title="Mala Town"></a>
-    <a href="#" class="tc-dot" data-target="4" title="九汤拉面"></a>
-    <a href="#" class="tc-dot" data-target="5" title="蜀大侠"></a>
-    <a href="#" class="tc-dot" data-target="6" title="使用条款"></a>
+    <a href="#" class="tc-dot" data-target="1" title="合作商家"></a>
+    <a href="#" class="tc-dot" data-target="2" title="使用条款"></a>
   </nav>
 
   <!-- ============ WECHAT MODAL ============ -->
@@ -207,14 +209,13 @@
   </div>
 
   <script>
-  // 滚动联动右侧 dot 指示器
+  // 上下滚动联动右侧 dot 指示器
   (function(){
     var snap = document.querySelector('.tc-snap');
     var screens = document.querySelectorAll('.tc-screen');
     var dots = document.querySelectorAll('.tc-dot');
     if (!snap || !screens.length) return;
 
-    // 点击 dot 跳到对应屏
     dots.forEach(function(d, i){
       d.addEventListener('click', function(e){
         e.preventDefault();
@@ -223,7 +224,6 @@
       });
     });
 
-    // 滚动时更新激活 dot
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
         if (en.isIntersecting && en.intersectionRatio > 0.5) {
@@ -235,6 +235,74 @@
     }, { root: snap, threshold: [0.5] });
 
     screens.forEach(function(s){ io.observe(s); });
+  })();
+
+  // 商家轮播（左右切换）
+  (function(){
+    var track = document.getElementById('tc-track');
+    var prev = document.getElementById('tc-prev');
+    var next = document.getElementById('tc-next');
+    var dotsBox = document.getElementById('tc-card-dots');
+    if (!track) return;
+
+    var cards = track.children;
+    var total = cards.length;
+    var idx = 0;
+
+    function go(i){
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+      // 更新圆点
+      Array.prototype.forEach.call(dotsBox.children, function(d, k){
+        d.classList.toggle('tc-card-dot--active', k === idx);
+      });
+    }
+
+    if (prev) prev.addEventListener('click', function(){ go(idx - 1); });
+    if (next) next.addEventListener('click', function(){ go(idx + 1); });
+
+    Array.prototype.forEach.call(dotsBox.children, function(d, k){
+      d.addEventListener('click', function(){ go(k); });
+    });
+
+    // 键盘箭头（仅当轮播屏在视口中时响应）
+    var carouselScreen = track.closest('.tc-screen--carousel');
+    document.addEventListener('keydown', function(e){
+      if (!carouselScreen) return;
+      var rect = carouselScreen.getBoundingClientRect();
+      var inView = rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.5;
+      if (!inView) return;
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx - 1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); go(idx + 1); }
+    });
+
+    // 触屏左右滑动（不干扰上下滚动：Pointer Events + 阈值判断）
+    var startX = 0, startY = 0, isHorizontal = false, dragging = false;
+    track.addEventListener('touchstart', function(e){
+      if (e.touches.length !== 1) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isHorizontal = false;
+      dragging = true;
+    }, {passive:true});
+
+    track.addEventListener('touchmove', function(e){
+      if (!dragging) return;
+      var dx = e.touches[0].clientX - startX;
+      var dy = e.touches[0].clientY - startY;
+      if (!isHorizontal && (Math.abs(dx) > 10 || Math.abs(dy) > 10)) {
+        isHorizontal = Math.abs(dx) > Math.abs(dy);
+      }
+    }, {passive:true});
+
+    track.addEventListener('touchend', function(e){
+      if (!dragging || !isHorizontal) { dragging = false; return; }
+      var dx = (e.changedTouches[0] || e.touches[0] || {}).clientX - startX;
+      if (Math.abs(dx) > 60) {
+        if (dx < 0) go(idx + 1); else go(idx - 1);
+      }
+      dragging = false;
+    });
   })();
   </script>
 
