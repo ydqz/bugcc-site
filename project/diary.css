@@ -1,0 +1,169 @@
+/* ============================================================
+   BUGCC · BU留子日记 详情页样式
+   ============================================================ */
+
+.diary {
+  max-width: 980px;
+  margin: 8px auto 40px;
+}
+
+.diary__head-eyebrow {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: var(--red);
+  font-weight: 600;
+  margin: 24px 0 6px;
+  text-align: center;
+}
+.diary__head-title {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+  margin: 0 0 32px;
+  font-style: italic;
+}
+
+/* ---- 单期卡片 ---- */
+.diary-ep {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(166, 24, 42, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s;
+}
+.diary-ep:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -22px rgba(166, 24, 42, 0.22);
+  border-color: rgba(166, 24, 42, 0.25);
+  background: #fff;
+}
+
+/* ---- 封面 + overlay ---- */
+.diary-ep__cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(166, 24, 42, 0.06);
+}
+.diary-ep__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s;
+}
+.diary-ep:hover .diary-ep__cover img {
+  transform: scale(1.03);
+}
+/* 角标：期数 + 日期 */
+.diary-ep__overlay {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.diary-ep__num {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px -4px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+}
+.diary-ep__date {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+/* ---- 卡片正文 ---- */
+.diary-ep__body {
+  padding: 22px 26px 26px;
+}
+.diary-ep__body h3 {
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+.diary-ep__body p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+
+/* ---- 集数链接（横向 3 个）---- */
+.diary-ep__episodes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (max-width: 540px) {
+  .diary-ep__episodes { grid-template-columns: 1fr; }
+}
+
+.diary-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid rgba(166, 24, 42, 0.18);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.diary-link:hover {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -8px rgba(166, 24, 42, 0.4);
+}
+.diary-link__tag {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--red);
+  min-width: 28px;
+}
+.diary-link:hover .diary-link__tag {
+  color: #FFE680;
+}
+.diary-link__txt {
+  flex: 1;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.diary-link__icon {
+  font-size: 14px;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.diary-link:hover .diary-link__icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
