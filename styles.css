@@ -16,7 +16,7 @@
 
   --font-cn:    'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-en:    'Inter', system-ui, sans-serif;
-  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-serif: 'Inter', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -884,7 +884,7 @@ a:hover { opacity: 0.7; }
 
 /* ============ Page Hero (departments.html / events.html 顶部) ============ */
 .page-hero {
-  padding: 140px 0 60px;
+  padding: 140px 0 24px;
   text-align: center;
 }
 .page-hero__title {
@@ -903,6 +903,9 @@ a:hover { opacity: 0.7; }
   color: var(--ink-soft);
 }
 .page-hero__sub--light { color: rgba(255, 255, 255, 0.85); }
+
+/* page-hero 紧跟 section 时压缩中间留白 */
+.page-hero + .section { padding-top: 40px; }
 
 /* ============ Nav active 状态 ============ */
 .nav__links > a.is-active,
@@ -964,7 +967,7 @@ a:hover { opacity: 0.7; }
   height: 10px;
 }
 .nav__item--has-sub:hover .nav__sub-menu,
-.nav__item--has-sub:focus-within .nav__sub-menu {
+.nav__item--has-sub:focus-within:hover .nav__sub-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

@@ -3,7 +3,7 @@
    依赖父级 ../styles.css 提供的 design tokens 与基础排版
    ============================================================ */
 
-.dept-page { background: var(--cream-soft); min-height: 100vh; }
+.dept-page { background: var(--cream-soft); min-height: 100vh; padding-top: 72px; }
 
 /* 顶部返回条 */
 .dept-topbar {

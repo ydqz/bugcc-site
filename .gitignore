@@ -9,3 +9,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# 备份文件
+*.bak
