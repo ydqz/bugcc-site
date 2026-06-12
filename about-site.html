@@ -3,15 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>部门 · BUGCC</title>
-  <meta name="description" content="BUGCC 的四个部门：主席团、事务部、融资部、市场部。" />
+  <title>关于本站 · BUGCC</title>
+  <meta name="description" content="BUGCC 官网建站手记。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 关于本站 —— 单栏窄幅阅读页 */
+    .about-site {
+      padding: 140px 0 80px;
+      background: var(--cream-soft);
+      min-height: 70vh;
+    }
+    .about-site__inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .about-site__eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+    .about-site__title {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 48px;
+      letter-spacing: 0.5px;
+    }
+    .about-site__body p {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--ink);
+      margin: 0 0 22px;
+    }
+    .about-site__lede {
+      color: var(--ink-soft) !important;
+      margin-bottom: 28px !important;
+    }
+    .about-site__quote {
+      margin: 0;
+      padding: 4px 0 4px 24px;
+      border-left: 2px solid var(--red);
+    }
+    .about-site__quote p:last-child { margin-bottom: 0; }
+    .about-site__divider {
+      border: none;
+      border-top: 1px solid rgba(166, 24, 42, 0.12);
+      margin: 48px 0;
+    }
+    .about-site__sign {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+    .about-site__sign-name {
+      color: var(--ink);
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      .about-site { padding: 110px 0 60px; }
+      .about-site__title { font-size: 26px; margin-bottom: 36px; line-height: 1.4; }
+      .about-site__body p { font-size: 16px; line-height: 1.85; }
+      .about-site__quote { padding-left: 18px; }
+      .about-site__divider { margin: 36px 0; }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- ============ NAV ============ -->
   <header class="nav nav--scrolled">
     <div class="nav__inner container">
       <a href="index.html" class="nav__brand">
@@ -34,7 +103,7 @@
           </div>
         </div>
         <div class="nav__item nav__item--has-sub">
-          <a href="departments.html" class="nav__item-link is-active">关于我们 <span class="nav__caret">▾</span></a>
+          <a href="departments.html" class="nav__item-link">关于我们 <span class="nav__caret">▾</span></a>
           <div class="nav__sub-menu">
             <a href="dept/president.html">主席团</a>
             <a href="dept/af.html">事务部</a>
@@ -73,45 +142,33 @@
     </div>
   </header>
 
-  <section class="page-hero section--cream">
-    <div class="container">
-      <p class="eyebrow">02 / Departments</p>
-      <h1 class="page-hero__title">四个部门，一个 BUGCC</h1>
-      <p class="page-hero__sub">主席团 · 事务部 · 融资部 · 市场部 — 点击卡片了解每个部门的详细介绍与成员组成。</p>
-    </div>
-  </section>
+  <!-- ============ ABOUT SITE ============ -->
+  <main class="about-site">
+    <div class="about-site__inner">
+      <p class="about-site__eyebrow">About this site</p>
+      <h1 class="about-site__title">恭喜你发现小彩蛋^(⁎⁍̴̛ᴗ⁍̴̛⁎)^</h1>
 
-  <section class="section section--cream">
-    <div class="container">
-      <div class="dept-grid">
-        <a class="dept dept--link" href="dept/president.html">
-          <div class="dept__num">01</div>
-          <h3>主席团 <span class="dept__en">President Cabinet</span></h3>
-          <p>定方向、做决策、对外代表社团形象。统筹年度规划与跨部门协作。</p>
-          <span class="dept__more">了解详情 →</span>
-        </a>
-        <a class="dept dept--link" href="dept/af.html">
-          <div class="dept__num">02</div>
-          <h3>事务部 <span class="dept__en">Affairs · AF</span></h3>
-          <p>统筹策划社团内部与外部合作的各类活动，锻炼组织协调、沟通社交、管理策划多方面能力。</p>
-          <span class="dept__more">了解详情 →</span>
-        </a>
-        <a class="dept dept--link" href="dept/fe.html">
-          <div class="dept__num">03</div>
-          <h3>融资部 <span class="dept__en">Finance · FE</span></h3>
-          <p>社团的小金库，负责为各大活动筹集资金与拓展外联资源，掌握 BUGCC 的财政大权。</p>
-          <span class="dept__more">了解详情 →</span>
-        </a>
-        <a class="dept dept--link" href="dept/mk.html">
-          <div class="dept__num">04</div>
-          <h3>市场部 <span class="dept__en">Marketing · MK</span></h3>
-          <p>为内部及外部活动进行宣传推广，扩大社团影响力，是 BUGCC 的「门面担当」。</p>
-          <span class="dept__more">了解详情 →</span>
-        </a>
+      <div class="about-site__body">
+        <p class="about-site__lede">本网站由 shushu 制作，以下是一些她想说的话：</p>
+
+        <blockquote class="about-site__quote">
+          <p>我在 24 Fall 入学那年就加入 BUGCC，到现在第三年啦！这里就像是我在 BU 的一个小家，我在这里有过太多美好的回忆，认识了好多朋友，也成长了许多。一直想给 GCC 留下点之前没有的东西，刚好今年有时间、有合适的工具，就把这个做出来了。</p>
+
+          <p>设计上没想太多，沿用我们 Operation 的传统风格，能表达清晰就好。希望它能让大家更方便地了解 BUGCC，也算是一份记录。</p>
+
+          <p>社团没有专人维护网站的传统，但内容会过时、活动会更新，新一届的人也会想加自己的痕迹。如果你是接手这件事的人——欢迎你改动它、加东西、甚至推翻重做。它不属于我，它属于 BUGCC。</p>
+        </blockquote>
+      </div>
+
+      <hr class="about-site__divider" />
+
+      <div class="about-site__sign">
+        <div><span class="about-site__sign-name">郑姝</span> · 26-27 届主席之一 · 2026 年 6 月</div>
       </div>
     </div>
-  </section>
+  </main>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -156,6 +213,13 @@
       <p class="wechat-modal__hint">用微信「扫一扫」即可关注</p>
     </div>
   </div>
+
+  <script>
+    // 移动端菜单
+    document.querySelector('.nav__toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav__links')?.classList.toggle('nav__links--open');
+    });
+  </script>
 
 </body>
 </html>
